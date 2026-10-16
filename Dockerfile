@@ -8,7 +8,7 @@ COPY public public
 COPY site site
 RUN python build.py
 
-FROM nginx:1.28-alpine@sha256:a8b39bd9cf0f83869a2162827a0caf6137ddf759d50a171451b335cecc87d236
+FROM nginx:1.29-alpine@sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY contact.env /etc/beidwerk/contact.env
 COPY --chmod=755 docker-entrypoint.d/40-beidwerk-contact.sh /docker-entrypoint.d/
