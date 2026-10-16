@@ -1,6 +1,6 @@
 [project]
 name = "beidwerk-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "The Beidwerk design language as an MCP server: principles, tokens, kit, the four signs, image prompts. Read-only, offline."
 requires-python = ">=3.10"
 dependencies = ["mcp>=2.0"]
