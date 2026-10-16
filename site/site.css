@@ -389,6 +389,8 @@ img.appicon { border-radius: 22%; object-fit: cover; }
 .stage { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px 16px;
   background: rgba(8, 10, 7, .0); backdrop-filter: blur(0px); transition: background .35s ease, backdrop-filter .35s ease; }
 .stage.on { background: rgba(8, 10, 7, .93); backdrop-filter: blur(6px); }
+/* display: grid above would beat the hidden attribute: a closed stage, invisible, would cover the page and take every click */
+.stage[hidden] { display: none; }
 .stage-in { width: min(1280px, 100%); display: grid; gap: 18px; opacity: 0; transform: translateY(18px) scale(.985);
   transition: opacity .45s ease, transform .55s cubic-bezier(.2, .8, .2, 1); }
 .stage.on .stage-in { opacity: 1; transform: none; }
@@ -600,3 +602,5 @@ html[data-theme="dark"] .zone-work:has(.hero) .site-h:not(.solid):not(.open) { c
         font: 500 12px/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; text-decoration: none; }
 .skip:focus { top: 12px; }
 h1.flaps { margin: 0; font: inherit; }
+/* page-head pictures are portraits: keep the face (the upper part) in the wide crop */
+.phead > img { object-position: 50% 22%; }
