@@ -138,3 +138,6 @@ addresses, no internal notes. The studio's sync checks for these before anything
 
 The code (`build.py`, the Docker files, `site.css`, `site.js`, `kit.css`, `beidwerk.css`) is under the MIT licence
 (`LICENSE`). The fonts are under the SIL Open Font Licence 1.1 (`site/fonts/LICENSES.md`).
+
+The content is not: the songs, lyrics, pictures, videos, texts and characters of Beidwerk in `public/` and in the
+media zip are © Beidwerk, all rights reserved; ask before you use them (see the legal page).

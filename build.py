@@ -11,7 +11,7 @@ media.json    the songs and music videos the pages play, with sizes and checksum
               zip (beidwerk-web-media-*.zip) that is unpacked on the server
 
 Every page link and picture is checked; the build fails when one is missing."""
-import hashlib, json, re, shutil, sys, zipfile
+import base64, hashlib, json, re, shutil, sys, zipfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -31,7 +31,7 @@ def sha256(f: Path) -> str:
 def check_media(root: Path) -> int:
     """The songs and videos under root, against media.json. Returns the number of problems."""
     bad = 0
-    for rel, want in json.loads((HERE / "media.json").read_text())["files"].items():
+    for rel, want in json.loads((HERE / "media.json").read_text(encoding="utf-8"))["files"].items():
         f = root / rel
         if not f.exists():
             print(f"media: {rel} is missing", file=sys.stderr)
@@ -58,11 +58,18 @@ def main(args: list[str]) -> int:
             f.extractall(DIST)
     bad = check_media(DIST) if args else 0
     top = DIST.resolve()
+    csp = (HERE / "nginx.conf").read_text(encoding="utf-8")
     for page in DIST.rglob("*.html"):
-        for ref in re.findall(r'(?:href|src|poster|data-src|data-video)="([^"#?]+)', page.read_text()):
+        html = page.read_text(encoding="utf-8")
+        for script in re.findall(r"<script>(.*?)</script>", html, re.S):  # the security policy allows inline scripts by hash
+            h = base64.b64encode(hashlib.sha256(script.encode()).digest()).decode()
+            if f"'sha256-{h}'" not in csp:
+                print(f"build: {page.relative_to(DIST)} has an inline script nginx.conf does not allow (sha256-{h})", file=sys.stderr)
+                bad += 1
+        for ref in re.findall(r'(?:href|src|poster|data-src|data-video)="([^"#?]+)', html):
             if re.match(r"[a-z]+:|//", ref):
                 continue  # another site
-            target = (page.parent / ref).resolve()
+            target = ((DIST / ref.lstrip("/")) if ref.startswith("/") else (page.parent / ref)).resolve()  # /… from the site's root
             if not target.is_relative_to(top):
                 print(f"build: {page.relative_to(DIST)} → {ref} points outside the site", file=sys.stderr)
                 bad += 1

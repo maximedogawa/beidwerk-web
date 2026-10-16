@@ -61,20 +61,20 @@
       "sha256": "b30c460f8a0e92071e82acdc7068b2ea77ac34c9c64430c8e239f1214cbd5ec4"
     },
     "video/behalt-deinen-schlussel.mp4": {
-      "bytes": 154446429,
-      "sha256": "f55eb6c88bdf0ac86e0ab2c8a69d5006d4a583cb692f3c51273dd9c9867a4ff1"
+      "bytes": 76373645,
+      "sha256": "70a7a647818c638ad4901e87d6a5f97f2ce360d499a19319a92d5393dad0be55"
     },
     "video/das-radio.mp4": {
-      "bytes": 102938839,
-      "sha256": "4cdf1d32f65ff09d1054b18235b3933a0cee2b714f54facd2549adc3e731486c"
+      "bytes": 48775411,
+      "sha256": "e0768993eef7a89d9a262b7ead588c35e7139a1368d18494ad2e2d443ccd2593"
     },
     "video/kaputt-und-schon.mp4": {
-      "bytes": 279184130,
-      "sha256": "f00e40e40312fd539c9432c14e63296ec52cc48c9c236da3c1bc09c9a00273b4"
+      "bytes": 114231931,
+      "sha256": "a2af8ce4453bb829acac0b905cdaab4172f2199554bfc6df7eb6a4875802f7bb"
     },
     "video/nachtmarkt.mp4": {
-      "bytes": 226119786,
-      "sha256": "44d25cdf064b0dea6877d71e562e12eae1ce9b5f88b78d9335dd8f8161c0753e"
+      "bytes": 114895199,
+      "sha256": "e6d445da4877d17fd6fa94a2dc14c47d6aaea9a59cc357866d25416b035d9a5f"
     }
   }
 }

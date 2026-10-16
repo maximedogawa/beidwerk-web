@@ -33,4 +33,10 @@ for key in NAME ADDRESS; do
     edit "s|@@BEIDWERK_LEGAL_$key@@|$(val "$v")|g; s|<tr data-imprint=\"$k\" hidden>|<tr data-imprint=\"$k\">|g"
   fi
 done
+if [ -z "${BEIDWERK_LEGAL_NAME:-}" ] || [ -z "${BEIDWERK_LEGAL_ADDRESS:-}" ]; then
+  if grep -q '@@BEIDWERK_LEGAL_' "$HTML/legal.html" 2>/dev/null; then
+    echo "beidwerk: WARNING the imprint has no name or address: set BEIDWERK_LEGAL_NAME and BEIDWERK_LEGAL_ADDRESS" \
+         "(a public site in Austria needs both)" >&2
+  fi
+fi
 echo "beidwerk: contact and imprint taken from the environment where set"

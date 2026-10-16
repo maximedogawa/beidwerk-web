@@ -3,30 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title} · Beidwerk</title>
+<title>{doc_title}</title>
+<meta property="og:title" content="{doc_title}">
+<meta property="og:description" content="{lead_attr}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beidwerk">
+<meta property="og:locale" content="{og_locale}">
 <meta name="description" content="{lead_attr}">
 <meta name="theme-color" content="{theme_color}">
-<script>try{{var t=localStorage.getItem("bw-theme-{zone}");if(t)document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
+<script>document.documentElement.classList.add("js");try{{var t=localStorage.getItem("bw-theme-{zone}");if(t)document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 <link rel="alternate" hreflang="{other_lang}" href="{other_href}">
 <link rel="icon" href="{root}{favicon}">
 {touch}<link rel="preload" href="{root}assets/fonts/archivo/Archivo-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{root}assets/fonts/fonts.css">
 <link rel="stylesheet" href="{root}assets/beidwerk.css">
 <link rel="stylesheet" href="{root}assets/kit.css">
-<link rel="stylesheet" href="{root}assets/site.css">
+<link rel="stylesheet" href="{root}assets/site.css">{extra_css}
 </head>
 <body class="bw zone-{zone}">
+<a class="skip" href="#main">{skip}</a>
 <header class="site-h">
   <a class="brand" href="{home}index.html">{brand_img}<span class="word">BEIDWERK</span><span class="sub">· Wien</span></a>
-  <nav>{nav}</nav>
+  <nav id="site-nav">{nav}</nav>
   <div class="tools">
     <a class="tool" href="{other_href}" hreflang="{other_lang}" lang="{other_lang}">{other_lang}</a>
     <button class="tool" type="button" data-theme-toggle aria-pressed="false"><span class="when-dark">{theme_light}</span><span class="when-light">{theme_dark}</span></button>
-    <button class="tool menu-btn" type="button" onclick="this.closest('.site-h').classList.toggle('open')">{menu}</button>
+    <button class="tool menu-btn" type="button" aria-controls="site-nav">{menu}</button>
   </div>
 </header>
 {head}
-<main class="prose">
+<main class="prose" id="main">
 {body}
 </main>
 <footer class="site-f"><div class="in">

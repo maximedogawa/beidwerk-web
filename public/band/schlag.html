@@ -4,34 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SCHLAG · Beidwerk</title>
+<meta property="og:title" content="SCHLAG · Beidwerk">
+<meta property="og:description" content="Ich hab die Welt schon fünfmal untergehen sehen. (I&#x27;ve seen the world end five times.)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beidwerk">
+<meta property="og:locale" content="en_GB">
 <meta name="description" content="Ich hab die Welt schon fünfmal untergehen sehen. (I&#x27;ve seen the world end five times.)">
 <meta name="theme-color" content="#0E130C">
-<script>try{var t=localStorage.getItem("bw-theme-stage");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("bw-theme-stage");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="alternate" hreflang="de" href="../de/band/schlag.html">
 <link rel="icon" href="../marks/logo-icon.png">
 <link rel="apple-touch-icon" href="../marks/apple-touch-icon.png">
 <link rel="manifest" href="../manifest.webmanifest">
 <meta name="apple-mobile-web-app-title" content="Beidwerk">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="preload" href="../assets/fonts/archivo/Archivo-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/fonts/fonts.css?v=227308de">
 <link rel="stylesheet" href="../assets/beidwerk.css?v=4d73d83b">
 <link rel="stylesheet" href="../assets/kit.css?v=d2be967a">
-<link rel="stylesheet" href="../assets/site.css?v=b3207e9f">
+<link rel="stylesheet" href="../assets/site.css?v=44b4a78e">
 </head>
 <body class="bw zone-stage">
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-h">
   <a class="brand" href="../index.html"><img class="appicon" src="../marks/logo-icon.webp" alt="" width="34" height="34"><span class="word">BEIDWERK</span><span class="sub">· Wien</span></a>
-  <nav><a href="../index.html">Beidwerk</a><a href="../apps.html">Apps</a><a href="../design/index.html">Design</a><a href="../make.html">Make</a><a href="../band/index.html" aria-current=page>Band</a></nav>
+  <nav id="site-nav"><a href="../index.html">Beidwerk</a><a href="../apps.html">Apps</a><a href="../design/index.html">Design</a><a href="../make.html">Make</a><a href="../band/index.html" aria-current=page>Band</a></nav>
   <div class="tools">
     <a class="tool" href="../de/band/schlag.html" hreflang="de" lang="de">de</a>
     <button class="tool" type="button" data-theme-toggle aria-pressed="false"><span class="when-dark">Light</span><span class="when-light">Dark</span></button>
-    <button class="tool menu-btn" type="button" onclick="this.closest('.site-h').classList.toggle('open')">Menu</button>
+    <button class="tool menu-btn" type="button" aria-controls="site-nav">Menu</button>
   </div>
 </header>
 <section class="phead" data-theme="dark"><img src="../img/site/IMG_1818.webp" alt=""><div class="in"><p class="lab"><span class="dot"></span>drums · 1968 · the band</p><h1 class="cond">SCHLAG</h1><p class="lede">Ich hab die Welt schon fünfmal untergehen sehen. (I&#x27;ve seen the world end five times.)</p></div></section>
-<main class="prose">
+<main class="prose" id="main">
 <div class="member-head"><img class="member-sign big" src="../marks/schlag-stage.svg" alt=""><div class="facts"><div><p class="bw-label">real name</p><p>Ferdinand &quot;Ferdl&quot; Nowak</p></div><div><p class="bw-label">role</p><p>drums</p></div><div><p class="bw-label">archetype</p><p>the ground</p></div><div><p class="bw-label">decade</p><p>1968</p></div><div><p class="bw-label">born</p><p>1950, Ottakring, Vienna</p></div><div><p class="bw-label">home</p><p>Der Keller, a rehearsal cellar under the U6 arches, next to STAMM&#x27;s bar, since 1988</p></div><div><p class="bw-label">principle</p><p>Alles ist Erfahrung, Burschi. Auch das.</p></div></div></div><div class="reference three"><img src="../img/band/IMG_1818.webp" alt="" loading="lazy"><img src="../img/band/IMG_1815.webp" alt="" loading="lazy"></div><section class="reveal"><header class="sec-h"><span class="idx">01</span><h2 class="cond">Essence</h2></header>
 <p>A 76-year-old drummer who has been in the room at the birth of every sound since 1968. Woodstock, the occupied
 Arena, punk in a London basement, the first drum machine, the Wall coming down, techno in empty buildings,
@@ -170,6 +176,6 @@ kit and a wall of 1980s drum machines with names: Gertrud, Bruno, Die Dame.</p><
   <div class="cols"><div><p class="lab">Beidwerk</p><a href="../apps.html">Apps</a><a href="../design/index.html">Design</a><a href="../language.html">How we speak</a><a href="../make.html">Make</a></div><div><p class="lab">The band</p><a href="../band/index.html">Band</a><a href="../album.html">The album</a><a href="../world.html">Neu-Wien</a></div><div><p class="lab">Open</p><a href="https://github.com/maximedogawa/beidwerk-web">GitHub</a><a href="https://pengui.space">pengui.space</a><a href="https://mempoolxch.space">mempoolxch.space</a></div><div><p class="lab">Contact</p><a href="mailto:leo@librem.one">leo@librem.one</a><a href="https://x.com/maximedogawa">X · @maximedogawa</a><a href="../legal.html">Legal · imprint · privacy</a></div></div>
   <p class="fine">Beidwerk is an art and software studio in Vienna: apps, music and stories in one design language of its own, made in the open.</p>
 </div></footer>
-<script src="../assets/site.js?v=ece2b6d4" defer></script>
+<script src="../assets/site.js?v=412eff3f" defer></script>
 </body>
 </html>

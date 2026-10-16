@@ -11,9 +11,6 @@
     // remembered per zone: the work pages (light by default) and the band's stage (dark by default) separately
     var zone = (document.body.className.match(/zone-(\w+)/) || [])[1] || "work";
     if (remember) try { localStorage.setItem("bw-theme-" + zone, t); } catch (e) {}  // only a visitor's own choice is kept
-    document.querySelectorAll("[data-theme-toggle]").forEach(function (b) {
-      b.setAttribute("aria-pressed", t === "light" ? "true" : "false");
-    });
   }
   document.querySelectorAll("[data-theme-toggle]").forEach(function (b) {
     b.addEventListener("click", function () {
@@ -21,6 +18,15 @@
     });
   });
   setTheme(root.getAttribute("data-theme") || "light", false);
+
+  /* the menu on small screens: open and closed, said to screen readers too */
+  document.querySelectorAll(".menu-btn").forEach(function (b) {
+    b.setAttribute("aria-expanded", "false");
+    b.addEventListener("click", function () {
+      var h = b.closest(".site-h"), open = h.classList.toggle("open");
+      b.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
 
   /* header: solid once the page scrolls */
   var head = document.querySelector(".site-h");
@@ -31,8 +37,11 @@
   var slides = document.querySelectorAll(".hero .slide");
   if (slides.length > 1 && !still) {
     var i = 0;
+    var held = false, hero = document.querySelector(".hero");
+    ["mouseenter", "focusin"].forEach(function (ev) { hero.addEventListener(ev, function () { held = true; }); });
+    ["mouseleave", "focusout"].forEach(function (ev) { hero.addEventListener(ev, function () { held = false; }); });
     setInterval(function () {
-      if (document.hidden) return;
+      if (document.hidden || held) return;
       slides[i].classList.remove("on");
       i = (i + 1) % slides.length;
       slides[i].classList.add("on");
@@ -75,9 +84,9 @@
        goes on with the song from the same second, the end goes on to the next song */
     function buildStage() {
       stage = document.createElement("div"); stage.className = "stage"; stage.hidden = true;
-      stage.setAttribute("role", "dialog"); stage.setAttribute("aria-modal", "true");
+      stage.setAttribute("role", "dialog"); stage.setAttribute("aria-modal", "true"); stage.setAttribute("aria-labelledby", "stage-title");
       stage.innerHTML = '<div class="stage-in"><div class="stage-frame"><video playsinline preload="auto"></video><i class="stage-p"></i></div>' +
-        '<div class="stage-meta"><p class="lab stage-n"></p><h2 class="cond stage-t"></h2><p class="stage-en"></p>' +
+        '<div class="stage-meta"><p class="lab stage-n"></p><h2 class="cond stage-t" id="stage-title"></h2><p class="stage-en"></p>' +
         '<div class="stage-btns"><button type="button" class="tool stage-pp"></button>' +
         '<button type="button" class="tool stage-audio">' + (de ? "Nur Ton" : "Audio only") + '</button>' +
         '<button type="button" class="tool stage-x" aria-label="' + (de ? "Schließen" : "Close") + '">×</button></div></div></div>';
@@ -94,6 +103,8 @@
         if (current) current.style.setProperty("--p", p);
       });
       video.addEventListener("ended", function () { closeStage(false); next(); });
+      // the video cannot be played (missing on the server, not supported): the song goes on as sound
+      video.addEventListener("error", function () { if (video.getAttribute("src") && !stage.hidden) closeStage(true); });
       pp.addEventListener("click", function () { video.paused ? video.play() : video.pause(); });
       stage.querySelector(".stage-audio").addEventListener("click", function () { closeStage(true); });
       stage.querySelector(".stage-x").addEventListener("click", function () { closeStage(true); });
@@ -101,11 +112,19 @@
       document.addEventListener("keydown", function (ev) {
         if (stage.hidden) return;
         if (ev.key === "Escape") closeStage(true);
+        if (ev.key === "Tab") {  // the focus stays inside the stage while it is open
+          var f = stage.querySelectorAll("button"), first = f[0], last = f[f.length - 1];
+          if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+          else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
+        }
         if (ev.key === " " && ev.target.tagName !== "BUTTON") { ev.preventDefault(); pp.click(); }
       });
     }
+    var hideTimer = null, opener = null;
     function openStage(row) {
       if (!stage) buildStage();
+      clearTimeout(hideTimer);  // a stage closing just now (the end of the last video) stays open for the next
+      opener = document.activeElement;
       audio.pause();
       var t = row.querySelector(".t"), at = current === row ? audio.currentTime : 0;
       stage.querySelector(".stage-n").textContent = row.querySelector(".n").textContent + " · " + (de ? "Musikvideo" : "Music video");
@@ -117,14 +136,16 @@
       stage.hidden = false; document.documentElement.classList.add("stage-open");
       requestAnimationFrame(function () { stage.classList.add("on"); });
       video.play().catch(function () {});
+      stage.querySelector(".stage-pp").textContent = "Pause";
       stage.querySelector(".stage-x").focus({ preventScroll: true });
     }
     function closeStage(keepSong) {
       var at = video.currentTime, playing = !video.paused;
       video.pause(); stage.classList.remove("on");
       video.removeAttribute("src"); video.load();  // a closed video downloads nothing more
-      setTimeout(function () { stage.hidden = true; }, 350);
+      hideTimer = setTimeout(function () { stage.hidden = true; }, 350);
       document.documentElement.classList.remove("stage-open");
+      if (opener && opener.focus) opener.focus({ preventScroll: true });  // back where the visitor was
       if (keepSong && current) {  // the song goes on as sound, from the same second
         audio.src = current.getAttribute("data-src");
         audio.addEventListener("loadedmetadata", function seek() { audio.removeEventListener("loadedmetadata", seek); audio.currentTime = at; }, { once: true });
@@ -150,6 +171,15 @@
     });
     audio.addEventListener("ended", next);
   }
+
+  /* preview videos (data-inview) play only while on screen; not with reduced motion or data saving */
+  var save = navigator.connection && navigator.connection.saveData;
+  document.querySelectorAll("video[data-inview]").forEach(function (v) {
+    if (still || save || !("IntersectionObserver" in window)) return;  // the poster stays
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } });
+    }, { rootMargin: "0px 0px -10% 0px" }).observe(v);
+  });
 
   /* reveal sections as they come in */
   if ("IntersectionObserver" in window && !still) {

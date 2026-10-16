@@ -4,34 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The design language · Beidwerk</title>
+<meta property="og:title" content="The design language · Beidwerk">
+<meta property="og:description" content="One set of rules for everything we make: an app screen, a poster, a song cover, a music video. They keep our work recognisable and honest, and they are short enough to remember. If a piece would not still be worth looking at in a hundred years, we make it again.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beidwerk">
+<meta property="og:locale" content="en_GB">
 <meta name="description" content="One set of rules for everything we make: an app screen, a poster, a song cover, a music video. They keep our work recognisable and honest, and they are short enough to remember. If a piece would not still be worth looking at in a hundred years, we make it again.">
 <meta name="theme-color" content="#F4F0E8">
-<script>try{var t=localStorage.getItem("bw-theme-work");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("bw-theme-work");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="alternate" hreflang="de" href="../de/design/index.html">
 <link rel="icon" href="../marks/logo-icon.png">
 <link rel="apple-touch-icon" href="../marks/apple-touch-icon.png">
 <link rel="manifest" href="../manifest.webmanifest">
 <meta name="apple-mobile-web-app-title" content="Beidwerk">
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="preload" href="../assets/fonts/archivo/Archivo-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/fonts/fonts.css?v=227308de">
 <link rel="stylesheet" href="../assets/beidwerk.css?v=4d73d83b">
 <link rel="stylesheet" href="../assets/kit.css?v=d2be967a">
-<link rel="stylesheet" href="../assets/site.css?v=b3207e9f">
+<link rel="stylesheet" href="../assets/site.css?v=44b4a78e">
 </head>
 <body class="bw zone-work">
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-h">
   <a class="brand" href="../index.html"><img class="appicon" src="../marks/logo-icon.webp" alt="" width="34" height="34"><span class="word">BEIDWERK</span><span class="sub">· Wien</span></a>
-  <nav><a href="../index.html">Beidwerk</a><a href="../apps.html">Apps</a><a href="../design/index.html" aria-current=page>Design</a><a href="../make.html">Make</a><a href="../band/index.html">Band</a></nav>
+  <nav id="site-nav"><a href="../index.html">Beidwerk</a><a href="../apps.html">Apps</a><a href="../design/index.html" aria-current=page>Design</a><a href="../make.html">Make</a><a href="../band/index.html">Band</a></nav>
   <div class="tools">
     <a class="tool" href="../de/design/index.html" hreflang="de" lang="de">de</a>
     <button class="tool" type="button" data-theme-toggle aria-pressed="false"><span class="when-dark">Light</span><span class="when-light">Dark</span></button>
-    <button class="tool menu-btn" type="button" onclick="this.closest('.site-h').classList.toggle('open')">Menu</button>
+    <button class="tool menu-btn" type="button" aria-controls="site-nav">Menu</button>
   </div>
 </header>
 <section class="phead noimg" data-theme="dark"><div class="in"><p class="lab"><span class="dot"></span>Design · the rules behind everything Beidwerk makes</p><h1 class="cond">The design language</h1><p class="lede">One set of rules for everything we make: an app screen, a poster, a song cover, a music video. They keep our work recognisable and honest, and they are short enough to remember. If a piece would not still be worth looking at in a hundred years, we make it again.</p></div></section>
-<main class="prose">
+<main class="prose" id="main">
 <section class="reveal"><header class="sec-h"><span class="idx">01</span><h2 class="cond">Seven principles</h2><p class="aside lab">What every piece follows</p></header>
 <ol>
 <li><strong>Two sides, one line.</strong> Everything we make has two sides that meet: two people, two hands, the old and the
@@ -154,6 +160,6 @@ inside a picture.</p>
   <div class="cols"><div><p class="lab">Beidwerk</p><a href="../apps.html">Apps</a><a href="../design/index.html">Design</a><a href="../language.html">How we speak</a><a href="../make.html">Make</a></div><div><p class="lab">The band</p><a href="../band/index.html">Band</a><a href="../album.html">The album</a><a href="../world.html">Neu-Wien</a></div><div><p class="lab">Open</p><a href="https://github.com/maximedogawa/beidwerk-web">GitHub</a><a href="https://pengui.space">pengui.space</a><a href="https://mempoolxch.space">mempoolxch.space</a></div><div><p class="lab">Contact</p><a href="mailto:leo@librem.one">leo@librem.one</a><a href="https://x.com/maximedogawa">X · @maximedogawa</a><a href="../legal.html">Legal · imprint · privacy</a></div></div>
   <p class="fine">Beidwerk is an art and software studio in Vienna: apps, music and stories in one design language of its own, made in the open.</p>
 </div></footer>
-<script src="../assets/site.js?v=ece2b6d4" defer></script>
+<script src="../assets/site.js?v=412eff3f" defer></script>
 </body>
 </html>
