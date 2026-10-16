@@ -15,7 +15,7 @@ build in the Beidwerk style: read design_principles first, take colours and type
 the kit's bw- classes, use the four signs for marks, and write image prompts with build_prompt. The code and the look
 are open; the songs, pictures and texts of Beidwerk are not."""
 
-mcp = MCPServer(name="beidwerk", title="Beidwerk", instructions=INSTRUCTIONS, version="0.1.0")
+mcp = MCPServer(name="beidwerk", title="Beidwerk", instructions=INSTRUCTIONS, version="0.1.1")
 
 
 @cache

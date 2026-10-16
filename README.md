@@ -73,7 +73,36 @@ After the first release, GitHub keeps the image private until it is made public 
 
 ---
 
-## Run it on a server
+## Run it on a server with ONCE
+
+[ONCE](https://github.com/basecamp/once) runs the image with HTTPS, updates and backups. The image answers ONCE's
+health check (`/up`), and keeps the songs and videos in ONCE's volume (`/storage/media`).
+
+1. **Install** on the server (a domain's DNS `A` record points at it): `curl https://get.once.com | sh`, then
+   `once`, and give it the image `ghcr.io/maximedogawa/beidwerk-web:latest` and the domain. The site runs at once,
+   without songs and videos; nothing else has to be set first.
+2. **The songs and videos:** copy the media zip to the server, put it into the app's volume and unpack it there:
+
+   ```sh
+   scp beidwerk-web-media-1.zip server:
+   docker cp beidwerk-web-media-1.zip $(docker ps -q --filter name=once-app-beidwerk-web):/storage/
+   once exec <domain> beidwerk-media     # unpacks into /storage/media and removes the zip
+   ```
+
+   A zip left in `/storage` is also unpacked whenever the container starts. A damaged zip (copied only partly)
+   is left alone, and the songs and videos before it stay.
+3. **Contact and imprint, whenever you are ready:** in `once`, the app's settings → *Environment*, add
+   `BEIDWERK_LEGAL_NAME`, `BEIDWERK_LEGAL_ADDRESS` (lines separated by `\n`) and, if they change,
+   `BEIDWERK_CONTACT_EMAIL` and `BEIDWERK_CONTACT_X`. Or in one command:
+   `once update <domain> --env BEIDWERK_LEGAL_NAME="…" --env BEIDWERK_LEGAL_ADDRESS="…"` (`--env` replaces the
+   whole list: give every variable each time). ONCE starts the container anew and the values are in every page.
+
+ONCE pulls the image anonymously: make the package public on GitHub (*Packages*), or give ONCE
+`--registry-username` and `--registry-password` (a token that may read packages).
+
+---
+
+## Run it on a server with Docker Compose
 
 On the server, one folder holds `docker-compose.yml` (from this repository) and the media:
 
@@ -81,7 +110,7 @@ On the server, one folder holds `docker-compose.yml` (from this repository) and 
 mkdir -p ~/beidwerk-web && cd ~/beidwerk-web
 curl -fsSLO https://raw.githubusercontent.com/maximedogawa/beidwerk-web/main/docker-compose.yml
 # copy beidwerk-web-media-1.zip here (scp, rsync …), then:
-unzip -o beidwerk-web-media-1.zip -d media    # → media/audio/*.m4a, media/video/*.mp4
+unzip -o beidwerk-web-media-1.zip -d media    # → media/audio/*.m4a, media/video/*.mp4 (mounted at /storage/media)
 docker compose pull && docker compose up -d   # the site on port 8080
 ```
 

@@ -6,7 +6,7 @@ services:
     ports:
       - "${BEIDWERK_WEB_PORT:-8080}:80"
     volumes:
-      - ./media:/media:ro
+      - ./media:/storage/media:ro
     environment:  # contact and imprint; empty keeps what the pages were built with (see README.md)
       BEIDWERK_CONTACT_EMAIL: ${BEIDWERK_CONTACT_EMAIL:-}
       BEIDWERK_CONTACT_X: ${BEIDWERK_CONTACT_X:-}
