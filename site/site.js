@@ -135,7 +135,7 @@
       current = row;
       video.currentTime = at;
       stage.hidden = false; document.documentElement.classList.add("stage-open");
-      requestAnimationFrame(function () { stage.classList.add("on"); });
+      void stage.offsetWidth; stage.classList.add("on");  // at once, not on the next frame: a frame that never comes would leave it open but invisible
       video.play().catch(function () {});
       stage.querySelector(".stage-pp").textContent = "Pause";
       stage.querySelector(".stage-x").focus({ preventScroll: true });
