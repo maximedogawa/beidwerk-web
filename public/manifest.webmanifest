@@ -1,0 +1,21 @@
+{
+  "name": "Beidwerk",
+  "short_name": "Beidwerk",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0E130C",
+  "theme_color": "#0E130C",
+  "icons": [
+    {
+      "src": "marks/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "marks/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

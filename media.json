@@ -1,0 +1,80 @@
+{
+  "files": {
+    "audio/behalt-deinen-schlussel.m4a": {
+      "bytes": 4628745,
+      "sha256": "0b561fca3ee1d99142a381026e028c31919f6486ffc4d9332ddab59bbe7bf4b2"
+    },
+    "audio/beide-seiten.m4a": {
+      "bytes": 4843518,
+      "sha256": "641c165717fb8e5744f5e0a1c0874f83c76c56f51b6916f1236860920a02cf75"
+    },
+    "audio/das-archiv.m4a": {
+      "bytes": 4600653,
+      "sha256": "b9d89e834c773acd79592c35e0cd695898c1666ff6d0e4a4e9729a0b24d3a63f"
+    },
+    "audio/das-bleibende.m4a": {
+      "bytes": 4725943,
+      "sha256": "56d501fa94a22dbc1102f44c739f9d836a5504d1011f0cfb9d14a12de42b2ffe"
+    },
+    "audio/das-radio.m4a": {
+      "bytes": 4866871,
+      "sha256": "8653f42d70231a7c4fbc3c245e49bc1e285f9d87dd2e0b4cbae46b5760e75091"
+    },
+    "audio/der-weltuntergang-ist-leise.m4a": {
+      "bytes": 7649801,
+      "sha256": "ac9d5a5e443e4177ab2c3ca8c1c31c54e648b7c4d3e3ccf8ecf89984ba781c3b"
+    },
+    "audio/i-hor-s-ned.m4a": {
+      "bytes": 5954698,
+      "sha256": "f1c5662c4649ab14d20444ca93633575951ee4c56219cd96c21b0831feda226f"
+    },
+    "audio/ka-sperrstund.m4a": {
+      "bytes": 5941763,
+      "sha256": "a6dfd19168068f02bbffceaf2a84980f06ede179244a15d9f6e29c8936460c10"
+    },
+    "audio/kaputt-und-schon.m4a": {
+      "bytes": 4832921,
+      "sha256": "6ab8b77e2e4b031376a7ba927266004e386f550b577b481d6bdbbbe64c4a732f"
+    },
+    "audio/nachtmarkt.m4a": {
+      "bytes": 5193920,
+      "sha256": "4b082c5b1286d2536b7dea5d068388ccb8bbcc6039112eeba1bd03f4d589ec5d"
+    },
+    "audio/schlacht-das-schwein.m4a": {
+      "bytes": 5691233,
+      "sha256": "944eada390359cebca1533995a596d751af9fb4bbc1dad26837252f5bcf0e293"
+    },
+    "audio/siebzehn-prozent.m4a": {
+      "bytes": 5073857,
+      "sha256": "31dedad24030bfccfefb00a397e0adc6e3c0b8756d1f7a85cfd66c18addd3f16"
+    },
+    "audio/sorglos.m4a": {
+      "bytes": 6364554,
+      "sha256": "7b3a903a4cda425d7e5c3beb93d0f1596127ccb9647bedc1a6353299caa61642"
+    },
+    "audio/strom-aus.m4a": {
+      "bytes": 8166824,
+      "sha256": "3481e90adb94f61062c4719f4d5fe4cea9e61de3f7426ed9f60874881633055e"
+    },
+    "audio/zwei-kaffee.m4a": {
+      "bytes": 3354625,
+      "sha256": "b30c460f8a0e92071e82acdc7068b2ea77ac34c9c64430c8e239f1214cbd5ec4"
+    },
+    "video/behalt-deinen-schlussel.mp4": {
+      "bytes": 154446429,
+      "sha256": "f55eb6c88bdf0ac86e0ab2c8a69d5006d4a583cb692f3c51273dd9c9867a4ff1"
+    },
+    "video/das-radio.mp4": {
+      "bytes": 102938839,
+      "sha256": "4cdf1d32f65ff09d1054b18235b3933a0cee2b714f54facd2549adc3e731486c"
+    },
+    "video/kaputt-und-schon.mp4": {
+      "bytes": 279184130,
+      "sha256": "f00e40e40312fd539c9432c14e63296ec52cc48c9c236da3c1bc09c9a00273b4"
+    },
+    "video/nachtmarkt.mp4": {
+      "bytes": 226119786,
+      "sha256": "44d25cdf064b0dea6877d71e562e12eae1ce9b5f88b78d9335dd8f8161c0753e"
+    }
+  }
+}

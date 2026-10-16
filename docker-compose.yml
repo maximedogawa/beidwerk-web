@@ -1,0 +1,15 @@
+# On the server, next to a folder media/ with the songs and videos unpacked from the media zip:
+#   unzip -o beidwerk-web-media-1.zip -d media && docker compose pull && docker compose up -d
+services:
+  web:
+    image: ghcr.io/maximedogawa/beidwerk-web:${BEIDWERK_WEB_TAG:-latest}
+    ports:
+      - "${BEIDWERK_WEB_PORT:-8080}:80"
+    volumes:
+      - ./media:/media:ro
+    environment:  # contact and imprint; empty keeps what the pages were built with (see README.md)
+      BEIDWERK_CONTACT_EMAIL: ${BEIDWERK_CONTACT_EMAIL:-}
+      BEIDWERK_CONTACT_X: ${BEIDWERK_CONTACT_X:-}
+      BEIDWERK_LEGAL_NAME: ${BEIDWERK_LEGAL_NAME:-}
+      BEIDWERK_LEGAL_ADDRESS: ${BEIDWERK_LEGAL_ADDRESS:-}
+    restart: unless-stopped
