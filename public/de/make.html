@@ -84,7 +84,44 @@ aus den Tokens, nie von Hand.</p>
 <li><strong>Ruhig rundherum, Spiel in den Zeichen.</strong> Das Verspielte bleibt klein, der Rest ruhig.</li>
 <li><strong>Keine Schrift in Bildern.</strong> Überschriften, Preise und Namen werden gesetzt, über oder neben dem Bild.</li>
 </ul>
-</section><section class="reveal"><header class="sec-h"><span class="idx">04</span><h2 class="cond">Wie Beidwerk selbst entsteht</h2><p class="aside lab">Von Hand, mit KI-Werkzeugen</p></header>
+</section><section class="reveal"><header class="sec-h"><span class="idx">04</span><h2 class="cond">Für Agenten</h2><p class="aside lab">Ein MCP-Server, einfaches JSON</p></header>
+<p>Auch Agenten können im Stil von Beidwerk arbeiten. Der Beidwerk-MCP-Server liest nur und läuft auf deinem eigenen
+Rechner, ohne Schlüssel und ohne Kosten. Ein Befehl verbindet ihn mit Claude Code:</p>
+<pre><code class="language-sh">claude mcp add beidwerk -- uvx --from git+https://github.com/maximedogawa/beidwerk-web beidwerk-mcp
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Werkzeug</th>
+<th>Was es liefert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>design_principles</code></td>
+<td>die sieben Prinzipien, die Probe für alles Neue, was Beidwerk nie tut (Englisch oder Deutsch)</td>
+</tr>
+<tr>
+<td><code>design_tokens</code></td>
+<td>die Farben für die Bühne oder den Beleg, Schrift, Abstände, Rundungen und Linien</td>
+</tr>
+<tr>
+<td><code>kit</code></td>
+<td>die drei Stylesheets zum Einbinden und jede <code>bw-</code>-Komponente mit einem HTML-Beispiel</td>
+</tr>
+<tr>
+<td><code>signs</code></td>
+<td>die vier roten Zeichen mit ihrer Bedeutung im B und ihrem SVG</td>
+</tr>
+<tr>
+<td><code>build_prompt</code></td>
+<td>ein Bild-Prompt im Stil von Beidwerk für jedes Motiv: hell (der Beleg) oder Nacht (die Bühne)</td>
+</tr>
+</tbody>
+</table>
+<p>Dieselben Daten gibt es auf dieser Seite für Agenten, die nur das Web lesen: <a href="../api/beidwerk.json">api/beidwerk.json</a>
+und <a href="../llms.txt">llms.txt</a>.</p>
+</section><section class="reveal"><header class="sec-h"><span class="idx">05</span><h2 class="cond">Wie Beidwerk selbst entsteht</h2><p class="aside lab">Von Hand, mit KI-Werkzeugen</p></header>
 <p>Beidwerk macht ein Mensch mit einer Reihe von KI-Werkzeugen, Schritt für Schritt: jedes Bild, jede Einstellung
 und jeder Schnitt wird von Hand ausgewählt, und das meiste wird verworfen.</p>
 <ul>

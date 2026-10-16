@@ -1,0 +1,480 @@
+{
+  "about": "Beidwerk, an art and software studio from Vienna, and its design language: the rules, the tokens, the kit, the four signs and the picture styles. Free to use for building in the Beidwerk style; the code and the look are open, the songs, pictures and texts of Beidwerk are not.",
+  "site": "https://github.com/maximedogawa/beidwerk-web",
+  "principles": {
+    "en": {
+      "principles": [
+        {
+          "title": "Two sides, one line",
+          "text": "Everything we make has two sides that meet: two people, two hands, the old and the new. We put that meeting in the centre, on one vertical line, so the eye knows where to look."
+        },
+        {
+          "title": "Things meet, then rest",
+          "text": "Every movement follows four steps: two things approach, they touch, they leave a trace, they come to rest. A payment arrives, a coin drops, a record is confirmed. The marks may play; the screen around them stays calm."
+        },
+        {
+          "title": "One red, used as light",
+          "text": "Red appears once per screen or picture, on the one thing that matters most, and only on a small part of it. It is never decoration. Each app has its own accent colour; the rule stays."
+        },
+        {
+          "title": "Real materials",
+          "text": "Paper, wood, brass, glass, brick: things you could touch, worn and made by hand. No glossy gradients. An ornament has to carry a meaning, or it goes."
+        },
+        {
+          "title": "Every decade at once",
+          "text": "Our world mixes 1910, 1968, 1986, 1999 and 2050 in one room, the way Vienna does. We combine them on purpose, never as a costume and never as a shiny vision of the future."
+        },
+        {
+          "title": "Two modes: the stage and the receipt",
+          "text": "The stage is dark and atmospheric, for pictures, stories and first impressions. The receipt is light: plain paper, black ink, clear numbers, for the moment someone confirms, signs or pays. That moment is never decorated."
+        },
+        {
+          "title": "Text is set, never generated",
+          "text": "Words are set in Archivo, numbers and dates in IBM Plex Mono, titles are drawn or set by hand. No machine writes text inside a picture."
+        }
+      ],
+      "test": "The test for anything new: cover the name. Is it still recognisably Beidwerk? Is it clear who made it? Would anyone still care about it in a hundred years? If one answer is no, it is not finished.",
+      "never": [
+        "purple, pink or shiny \"tech\" blue; decorative gradients",
+        "more than one red in a picture or on a screen",
+        "gold as a text colour, as a gradient or as plastic",
+        "text, numbers or logos generated inside a picture",
+        "the clichés of the trade: glowing blockchains, coins with faces, robots",
+        "drop shadows and rounded pill buttons in an interface",
+        "anything that makes people feel watched or locked in"
+      ]
+    },
+    "de": {
+      "principles": [
+        {
+          "title": "Zwei Seiten, eine Linie",
+          "text": "Alles, was wir machen, hat zwei Seiten, die sich treffen: zwei Menschen, zwei Hände, das Alte und das Neue. Diesen Moment setzen wir in die Mitte, auf eine senkrechte Linie, damit das Auge weiß, wohin es schauen soll."
+        },
+        {
+          "title": "Dinge treffen sich, dann ist Ruhe",
+          "text": "Jede Bewegung hat vier Schritte: Zwei Dinge nähern sich, sie berühren sich, sie hinterlassen eine Spur, sie kommen zur Ruhe. Eine Zahlung kommt an, eine Münze fällt, ein Eintrag ist bestätigt. Die Zeichen dürfen spielen; der Bildschirm rundherum bleibt ruhig."
+        },
+        {
+          "title": "Ein Rot, als Licht",
+          "text": "Rot gibt es einmal pro Bildschirm oder Bild, auf dem einen Wichtigsten, und nur auf einem kleinen Teil davon. Es ist nie Dekoration. Jede App hat ihre eigene Akzentfarbe; die Regel bleibt."
+        },
+        {
+          "title": "Echte Materialien",
+          "text": "Papier, Holz, Messing, Glas, Ziegel: Dinge, die man angreifen kann, abgenutzt und von Hand gemacht. Keine glänzenden Verläufe. Ein Ornament muss eine Bedeutung tragen, sonst kommt es weg."
+        },
+        {
+          "title": "Alle Jahrzehnte zugleich",
+          "text": "Unsere Welt mischt 1910, 1968, 1986, 1999 und 2050 in einem Raum, so wie Wien es tut. Wir verbinden sie mit Absicht, nie als Kostüm und nie als glänzende Zukunftsvision."
+        },
+        {
+          "title": "Zwei Modi: die Bühne und der Beleg",
+          "text": "Die Bühne ist dunkel und stimmungsvoll, für Bilder, Geschichten und den ersten Eindruck. Der Beleg ist hell: schlichtes Papier, schwarze Tinte, klare Zahlen, für den Moment, in dem jemand bestätigt, unterschreibt oder zahlt. Dieser Moment wird nie dekoriert."
+        },
+        {
+          "title": "Schrift wird gesetzt, nie erzeugt",
+          "text": "Wörter stehen in Archivo, Zahlen und Daten in IBM Plex Mono, Titel werden gezeichnet oder von Hand gesetzt. Keine Maschine schreibt Text in ein Bild."
+        }
+      ],
+      "test": "Die Probe für alles Neue: Deck den Namen ab. Ist es noch erkennbar Beidwerk? Ist klar, wer es gemacht hat? Würde sich in hundert Jahren noch jemand dafür interessieren? Wenn eine Antwort Nein ist, ist es nicht fertig.",
+      "never": [
+        "Lila, Pink oder glänzendes „Tech\"-Blau; dekorative Verläufe",
+        "mehr als ein Rot in einem Bild oder auf einem Bildschirm",
+        "Gold als Schriftfarbe, als Verlauf oder als Plastik",
+        "Text, Zahlen oder Logos, die in einem Bild erzeugt werden",
+        "die Klischees der Branche: leuchtende Blockchains, Münzen mit Gesichtern, Roboter",
+        "Schlagschatten und abgerundete Pillen-Knöpfe in einer Oberfläche",
+        "alles, wodurch sich Menschen beobachtet oder eingesperrt fühlen"
+      ]
+    }
+  },
+  "tokens": {
+    "modes": [
+      "light",
+      "dark"
+    ],
+    "color": {
+      "paper": {
+        "light": "#F4F0E8",
+        "dark": "#161513"
+      },
+      "paper-raised": {
+        "light": "#FBF8F2",
+        "dark": "#1F1D1A"
+      },
+      "rule": {
+        "light": "#8C867A",
+        "dark": "#6B665D"
+      },
+      "rule-soft": {
+        "light": "#DDD6C8",
+        "dark": "#34312C"
+      },
+      "ink": {
+        "light": "#1C1B19",
+        "dark": "#EFEAE1"
+      },
+      "ink-muted": {
+        "light": "#5E5A52",
+        "dark": "#A9A397"
+      },
+      "zinnober": {
+        "light": "#B8321C",
+        "dark": "#F0694D"
+      },
+      "indigo": {
+        "light": "#24346B",
+        "dark": "#93A3DB"
+      },
+      "soga": {
+        "light": "#8A5A2B",
+        "dark": "#C9935C"
+      },
+      "rotlicht": {
+        "light": "#C93A20",
+        "dark": "#E75839"
+      },
+      "gold": {
+        "light": "#8C6B3A",
+        "dark": "#C69C66"
+      },
+      "kupfer": {
+        "light": "#20422F",
+        "dark": "#20422F"
+      },
+      "wolfram": {
+        "light": "#E7AE72",
+        "dark": "#E7AE72"
+      },
+      "buehne": {
+        "light": "#0E130C",
+        "dark": "#0E130C"
+      },
+      "accent": {
+        "light": "#B8321C",
+        "dark": "#F0694D"
+      },
+      "accent-soft": {
+        "light": "#E9CEC3",
+        "dark": "#462720"
+      },
+      "second": {
+        "light": "#24346B",
+        "dark": "#93A3DB"
+      },
+      "second-soft": {
+        "light": "#CFCED2",
+        "dark": "#32343F"
+      }
+    },
+    "type": {
+      "families": {
+        "sans": {
+          "name": "Archivo",
+          "stack": "'Archivo', 'Helvetica Neue', Arial, sans-serif",
+          "usage": "Words."
+        },
+        "mono": {
+          "name": "IBM Plex Mono",
+          "stack": "'IBM Plex Mono', ui-monospace, Menlo, monospace",
+          "usage": "Labels, numbers, hashes, amounts."
+        },
+        "display": {
+          "name": "Archivo",
+          "stack": "'Archivo', 'Helvetica Neue', Arial, sans-serif",
+          "usage": "Reserved for a custom Beidwerk display face; aliases Archivo until then."
+        }
+      },
+      "groups": [
+        {
+          "name": "display",
+          "family": "display",
+          "size": "4rem",
+          "weight": 800,
+          "lineHeight": 0.95,
+          "tracking": "-0.03em"
+        },
+        {
+          "name": "h1",
+          "family": "sans",
+          "size": "2.75rem",
+          "weight": 800,
+          "lineHeight": 1.0,
+          "tracking": "-0.02em"
+        },
+        {
+          "name": "h2",
+          "family": "sans",
+          "size": "1.75rem",
+          "weight": 700,
+          "lineHeight": 1.1,
+          "tracking": "-0.01em"
+        },
+        {
+          "name": "lead",
+          "family": "sans",
+          "size": "1.25rem",
+          "weight": 400,
+          "lineHeight": 1.45,
+          "tracking": "0"
+        },
+        {
+          "name": "body",
+          "family": "sans",
+          "size": "1rem",
+          "weight": 400,
+          "lineHeight": 1.55,
+          "tracking": "0"
+        },
+        {
+          "name": "small",
+          "family": "sans",
+          "size": "0.875rem",
+          "weight": 400,
+          "lineHeight": 1.5,
+          "tracking": "0"
+        },
+        {
+          "name": "label",
+          "family": "mono",
+          "size": "0.75rem",
+          "weight": 500,
+          "lineHeight": 1.3,
+          "tracking": "0.08em",
+          "case": "upper"
+        },
+        {
+          "name": "figure",
+          "family": "mono",
+          "size": "1rem",
+          "weight": 500,
+          "lineHeight": 1.3,
+          "tracking": "0",
+          "numeric": "tabular-nums"
+        }
+      ]
+    },
+    "space": {
+      "1": "4px",
+      "2": "8px",
+      "4": "16px",
+      "6": "24px",
+      "12": "48px"
+    },
+    "radius": {
+      "none": "0",
+      "sm": "2px",
+      "full": "9999px"
+    },
+    "line": {
+      "rule": "1px",
+      "strong": "2px"
+    }
+  },
+  "kit": {
+    "files": [
+      "fonts/fonts.css",
+      "beidwerk.css",
+      "kit.css"
+    ],
+    "head": [
+      "<link rel=\"stylesheet\" href=\"beidwerk/fonts/fonts.css\">",
+      "<link rel=\"stylesheet\" href=\"beidwerk/beidwerk.css\">",
+      "<link rel=\"stylesheet\" href=\"beidwerk/kit.css\">"
+    ],
+    "body": "<body class=\"bw\" data-theme=\"light\">  <!-- light = the receipt, dark = the stage -->",
+    "components": [
+      {
+        "class": "bw-display",
+        "what": "the largest heading, for a first view",
+        "example": "<h1 class=\"bw-display\">Beidwerk</h1>"
+      },
+      {
+        "class": "bw-h1",
+        "what": "a page heading",
+        "example": "<h1 class=\"bw-h1\">The apps</h1>"
+      },
+      {
+        "class": "bw-h2",
+        "what": "a section heading",
+        "example": "<h2 class=\"bw-h2\">Two sides, one line</h2>"
+      },
+      {
+        "class": "bw-lead",
+        "what": "the opening paragraph of a page",
+        "example": "<p class=\"bw-lead\">Two parties meet, and both confirm it.</p>"
+      },
+      {
+        "class": "bw-small",
+        "what": "small print",
+        "example": "<p class=\"bw-small\">Confirmed on 16 October.</p>"
+      },
+      {
+        "class": "bw-label",
+        "what": "small monospace capitals above a value or a section",
+        "example": "<p class=\"bw-label\">Confirmed by</p>"
+      },
+      {
+        "class": "bw-figure",
+        "what": "numbers, amounts, dates: monospace, tabular figures",
+        "example": "<span class=\"bw-figure\">€ 3,80</span>"
+      },
+      {
+        "class": "bw-mono",
+        "what": "monospace text: hashes, ids, code",
+        "example": "<code class=\"bw-mono\">9,439,093</code>"
+      },
+      {
+        "class": "bw-accent",
+        "what": "the one red of the screen, for the one important thing",
+        "example": "<span class=\"bw-accent\">Confirmed</span>"
+      },
+      {
+        "class": "bw-wrap",
+        "what": "the page column",
+        "example": "<main class=\"bw-wrap\">…</main>"
+      },
+      {
+        "class": "bw-section",
+        "what": "vertical rhythm between sections",
+        "example": "<section class=\"bw-section\">…</section>"
+      },
+      {
+        "class": "bw-stack",
+        "what": "even space between the children",
+        "example": "<div class=\"bw-stack\"><p>…</p><p>…</p></div>"
+      },
+      {
+        "class": "bw-grid",
+        "what": "a responsive grid of cards",
+        "example": "<div class=\"bw-grid\"><article class=\"bw-card\">…</article></div>"
+      },
+      {
+        "class": "bw-link",
+        "what": "a text link",
+        "example": "<a class=\"bw-link\" href=\"/apps\">The apps</a>"
+      },
+      {
+        "class": "bw-button",
+        "what": "a button or a button-like link",
+        "example": "<a class=\"bw-button\" href=\"/start\">How it works</a>"
+      },
+      {
+        "class": "bw-button--primary",
+        "what": "the one main action",
+        "example": "<button class=\"bw-button bw-button--primary\">Start a record</button>"
+      },
+      {
+        "class": "bw-card",
+        "what": "a surface for one thing",
+        "example": "<article class=\"bw-card\"><h2 class=\"bw-h2\">Klimper</h2><p>…</p></article>"
+      },
+      {
+        "class": "bw-tag",
+        "what": "a small status tag; bw-tag--accent for the one important state",
+        "example": "<span class=\"bw-tag bw-tag--accent\">Confirmed</span>"
+      },
+      {
+        "class": "bw-notice",
+        "what": "a calm notice; bw-notice--accent when it matters",
+        "example": "<p class=\"bw-notice\">Alpha: still changing.</p>"
+      },
+      {
+        "class": "bw-table",
+        "what": "a table of records; numbers in td.num",
+        "example": "<table class=\"bw-table\"><tr><th>Item</th><th class=\"num\">Amount</th></tr><tr><td>1 Melange</td><td class=\"num\">€ 3,80</td></tr></table>"
+      },
+      {
+        "class": "bw-stat",
+        "what": "one number with its label",
+        "example": "<div class=\"bw-stat\"><span class=\"bw-stat__value\">21,401</span><span class=\"bw-stat__label\">nodes</span></div>"
+      },
+      {
+        "class": "bw-field",
+        "what": "a form field with its label",
+        "example": "<label class=\"bw-field\"><span>Amount</span><input inputmode=\"decimal\"></label>"
+      },
+      {
+        "class": "bw-header",
+        "what": "the site header with its navigation",
+        "example": "<header class=\"bw-header\"><nav><a href=\"/\">Beidwerk</a></nav></header>"
+      },
+      {
+        "class": "bw-footer",
+        "what": "the site footer",
+        "example": "<footer class=\"bw-footer\">…</footer>"
+      },
+      {
+        "class": "bw-media",
+        "what": "a picture or video with its caption",
+        "example": "<figure class=\"bw-media\"><img src=\"still.webp\" alt=\"\"><figcaption>…</figcaption></figure>"
+      }
+    ]
+  },
+  "signs": [
+    {
+      "member": "ECHT",
+      "id": "echt",
+      "sign": {
+        "en": "ring",
+        "de": "Ring"
+      },
+      "meaning": {
+        "en": "the light where the two halves of the B meet",
+        "de": "das Licht, wo sich die zwei Hälften des B treffen"
+      },
+      "role": "voice",
+      "decade": "2050",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 96 96\" width=\"96\" height=\"96\" role=\"img\" aria-label=\"ECHT\"><circle cx=\"48\" cy=\"48\" r=\"22\" fill=\"none\" stroke=\"#E75839\" stroke-width=\"10\"/></svg>"
+    },
+    {
+      "member": "STAMM",
+      "id": "stamm",
+      "sign": {
+        "en": "stripe",
+        "de": "Strich"
+      },
+      "meaning": {
+        "en": "the stem, the upright stroke of the B",
+        "de": "der Stamm, der senkrechte Strich des B"
+      },
+      "role": "guitar",
+      "decade": "1999",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 96 96\" width=\"96\" height=\"96\" role=\"img\" aria-label=\"STAMM\"><rect x=\"40\" y=\"12\" width=\"16\" height=\"72\" fill=\"#E75839\"/></svg>"
+    },
+    {
+      "member": "BOGEN",
+      "id": "bogen",
+      "sign": {
+        "en": "half-disc",
+        "de": "Halbkreis"
+      },
+      "meaning": {
+        "en": "the bowl, the curve of the B",
+        "de": "der Bogen, die Rundung des B"
+      },
+      "role": "double bass",
+      "decade": "1910",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 96 96\" width=\"96\" height=\"96\" role=\"img\" aria-label=\"BOGEN\"><path d=\"M16 64A32 32 0 0 1 80 64Z\" fill=\"#E75839\"/></svg>"
+    },
+    {
+      "member": "SCHLAG",
+      "id": "schlag",
+      "sign": {
+        "en": "square",
+        "de": "Quadrat"
+      },
+      "meaning": {
+        "en": "the beat that holds the B together",
+        "de": "der Takt, der das B zusammenhält"
+      },
+      "role": "drums",
+      "decade": "1968",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 96 96\" width=\"96\" height=\"96\" role=\"img\" aria-label=\"SCHLAG\"><rect x=\"24\" y=\"24\" width=\"48\" height=\"48\" fill=\"#E75839\"/></svg>"
+    }
+  ],
+  "prompt_styles": {
+    "receipt": "a still from a 35mm art film with fine natural grain, in the tradition of Neue Sachlichkeit object photography (Albert Renger-Patzsch, Lucia Moholy). Bright, soft north-window daylight, high key, pale and airy, gentle shadows, muted natural colour; the frame is light overall. Palette: unbleached paper, pale oak, raw concrete, warm grey and a little deep batik indigo, with exactly one accent: {accent_object}, matte like dry pigment, never glossy plastic; nothing else in the frame shares its colour, and nothing is orange or pink. Composition: one idea, built on a vertical centre line; only the objects named above, no extra props; every object is shown whole and entirely inside the frame, with wide empty margins; at least two thirds of the frame is calm empty light surface. No text, letters, numbers, logos or watermarks anywhere. No gradients, neon, glow, purple or digital sheen. No people's faces.",
+    "stage": "a still from a 1980s night film remastered in 4K, with heavy fine film grain and crushed blacks, like a concert photographed in smoke. Deep copper-green haze and darkness fill most of the frame; warm tungsten light falls on the subject from above or behind, and hard beams of red light cut through the smoke. Materials: smoky glass, cracked black leather, satin, wet brick and stone, old Viennese tiles; gold appears only as one small worn detail, never as the main colour of the picture. Exactly one accent: {accent_object}, glowing softly like a small light source; nothing else in the frame shares its colour, and nothing else is orange or pink. Composition: one idea, built on a vertical centre line that divides the frame into two halves; only the objects named above, no extra props; at least a third of the frame is calm dark space. No text, letters, numbers, logos or watermarks anywhere. No purple, no chrome-blue technology, no decorative gradients, no laser grids. People appear only as hands, backs or silhouettes, never a face.",
+    "accent_default": "one small cinnabar-red object"
+  }
+}

@@ -1,0 +1,20 @@
+[project]
+name = "beidwerk-mcp"
+version = "0.1.0"
+description = "The Beidwerk design language as an MCP server: principles, tokens, kit, the four signs, image prompts. Read-only, offline."
+requires-python = ">=3.10"
+dependencies = ["mcp>=2.0"]
+license = "MIT"
+
+[project.scripts]
+beidwerk-mcp = "beidwerk_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["beidwerk_mcp"]
+
+[tool.setuptools.package-data]
+beidwerk_mcp = ["data.json"]

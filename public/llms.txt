@@ -1,0 +1,25 @@
+# Beidwerk
+
+> An art and software studio from Vienna with a design language of its own: apps where two sides confirm a payment,
+> a delivery or a piece of work; music and films with its own band; and the rules, colours, type and components that
+> hold it together. The look is open to anyone.
+
+## Pages
+
+- [Beidwerk](/index.html): the studio, its four cornerstones
+- [The apps](/apps.html): the app family, what each does and how far it is
+- [The design language](/design/index.html): seven principles, the four signs, the stage and the receipt
+- [Make with it](/make.html): use the fonts, tokens and kit for your own site or app
+- [The band](/band/index.html): ECHT, STAMM, BOGEN, SCHLAG, the album and the music videos
+- German: the same pages under /de/
+
+## Data
+
+- [/api/beidwerk.json](/api/beidwerk.json): the principles (English and German), the design tokens, the kit components
+  with HTML examples, the four signs with their SVGs, and the two picture styles
+
+## MCP server
+
+    claude mcp add beidwerk -- uvx --from git+https://github.com/maximedogawa/beidwerk-web beidwerk-mcp
+
+Tools: design_principles, design_tokens, kit, signs, build_prompt. Read-only, offline, no keys.

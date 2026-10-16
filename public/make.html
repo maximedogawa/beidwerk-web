@@ -84,7 +84,44 @@ the tokens, never by hand.</p>
 <li><strong>Calm around, play in the marks.</strong> Let the playful part be small and the rest quiet.</li>
 <li><strong>No text in pictures.</strong> Headlines, prices and names are set in type, over or beside the picture.</li>
 </ul>
-</section><section class="reveal"><header class="sec-h"><span class="idx">04</span><h2 class="cond">How Beidwerk itself is made</h2><p class="aside lab">By hand, with AI tools</p></header>
+</section><section class="reveal"><header class="sec-h"><span class="idx">04</span><h2 class="cond">For agents</h2><p class="aside lab">An MCP server, plain JSON</p></header>
+<p>Agents can work in the Beidwerk style too. The Beidwerk MCP server is read-only and runs on your own machine, with
+no keys and no costs. One command connects it to Claude Code:</p>
+<pre><code class="language-sh">claude mcp add beidwerk -- uvx --from git+https://github.com/maximedogawa/beidwerk-web beidwerk-mcp
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it gives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>design_principles</code></td>
+<td>the seven principles, the test for anything new, what Beidwerk never does (English or German)</td>
+</tr>
+<tr>
+<td><code>design_tokens</code></td>
+<td>colours for the stage or the receipt, type, spacing, radius and lines</td>
+</tr>
+<tr>
+<td><code>kit</code></td>
+<td>the three stylesheets to link and every <code>bw-</code> component with an HTML example</td>
+</tr>
+<tr>
+<td><code>signs</code></td>
+<td>the four red signs with their meaning in the B and their SVG</td>
+</tr>
+<tr>
+<td><code>build_prompt</code></td>
+<td>an image prompt in the Beidwerk style for any subject: light (the receipt) or night (the stage)</td>
+</tr>
+</tbody>
+</table>
+<p>The same data is on this site for agents that only read the web: <a href="api/beidwerk.json">api/beidwerk.json</a> and
+<a href="llms.txt">llms.txt</a>.</p>
+</section><section class="reveal"><header class="sec-h"><span class="idx">05</span><h2 class="cond">How Beidwerk itself is made</h2><p class="aside lab">By hand, with AI tools</p></header>
 <p>Beidwerk is made by one person with a set of AI tools, step by step: every picture, every shot and every cut is
 chosen by hand, and most are thrown away.</p>
 <ul>

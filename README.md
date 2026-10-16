@@ -30,6 +30,8 @@ site/                the look, shared with the studio's own site
   fonts/             Archivo and IBM Plex Mono as WOFF2, with their licences
 media.json           the songs and music videos the pages play: path, size, checksum
 build.py             puts the site together into dist/ and checks it (plain Python, nothing to install)
+beidwerk_mcp/        the public MCP server: the design language for agents (data.json is written by the studio)
+pyproject.toml       makes beidwerk_mcp installable (`beidwerk-mcp`)
 Dockerfile           the site as an nginx image, without songs and videos
 docker-entrypoint.d/ sets contact and imprint from the server's environment when the container starts
 contact.env          the contact the pages were built with (for that script)
@@ -125,6 +127,26 @@ Give your product its own accent colour; keep the rules: one red per screen, no 
 and play in the marks.
 
 ---
+
+## For agents: the MCP server
+
+The design language is also an MCP server: read-only, offline, no keys. With Claude Code:
+
+```sh
+claude mcp add beidwerk -- uvx --from git+https://github.com/maximedogawa/beidwerk-web beidwerk-mcp
+```
+
+Without uv: `pip install git+https://github.com/maximedogawa/beidwerk-web`, then `claude mcp add beidwerk -- beidwerk-mcp`.
+
+| Tool | What it gives |
+| --- | --- |
+| `design_principles(lang)` | the seven principles, the test, the never-list; `en` or `de` |
+| `design_tokens(mode)` | colours for `light` (the receipt) or `dark` (the stage), type, spacing, radius, lines |
+| `kit(component)` | the stylesheets to link and the `bw-` components with HTML examples |
+| `signs(lang)` | the four red signs: member, instrument, decade, meaning in the B, SVG |
+| `build_prompt(subject, mode, accent)` | an image prompt in the Beidwerk style, `receipt` (light) or `stage` (night) |
+
+The same data is on the site as `/api/beidwerk.json` and `/llms.txt`.
 
 ## Contributing
 
