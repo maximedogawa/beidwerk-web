@@ -80,8 +80,9 @@
       if (row) row.classList.add(playing ? "playing" : "paused");
     }
     var de = document.documentElement.lang === "de", stage = null, video = null;
-    /* a song with a music video plays on the stage: the video large, with the song in it; "audio only" or closing
-       goes on with the song from the same second, the end goes on to the next song */
+    /* a song with a music video plays on the stage: the video large, with the song in it. "Audio only" goes on with
+       the song from the same second; closing (×, Escape, a click beside the video) stops it; the end goes on to the
+       next song */
     function buildStage() {
       stage = document.createElement("div"); stage.className = "stage"; stage.hidden = true;
       stage.setAttribute("role", "dialog"); stage.setAttribute("aria-modal", "true"); stage.setAttribute("aria-labelledby", "stage-title");
@@ -107,11 +108,11 @@
       video.addEventListener("error", function () { if (video.getAttribute("src") && !stage.hidden) closeStage(true); });
       pp.addEventListener("click", function () { video.paused ? video.play() : video.pause(); });
       stage.querySelector(".stage-audio").addEventListener("click", function () { closeStage(true); });
-      stage.querySelector(".stage-x").addEventListener("click", function () { closeStage(true); });
-      stage.addEventListener("click", function (ev) { if (ev.target === stage) closeStage(true); });
+      stage.querySelector(".stage-x").addEventListener("click", function () { closeStage(false); });
+      stage.addEventListener("click", function (ev) { if (ev.target === stage) closeStage(false); });
       document.addEventListener("keydown", function (ev) {
         if (stage.hidden) return;
-        if (ev.key === "Escape") closeStage(true);
+        if (ev.key === "Escape") closeStage(false);
         if (ev.key === "Tab") {  // the focus stays inside the stage while it is open
           var f = stage.querySelectorAll("button"), first = f[0], last = f[f.length - 1];
           if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
