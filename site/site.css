@@ -600,3 +600,5 @@ html[data-theme="dark"] .zone-work:has(.hero) .site-h:not(.solid):not(.open) { c
         font: 500 12px/1 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; text-decoration: none; }
 .skip:focus { top: 12px; }
 h1.flaps { margin: 0; font: inherit; }
+/* page-head pictures are portraits: keep the face (the upper part) in the wide crop */
+.phead > img { object-position: 50% 22%; }
