@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Selber machen · Beidwerk</title>
 <meta property="og:title" content="Selber machen · Beidwerk">
-<meta property="og:description" content="Beidwerk entsteht offen. Die Schriften, Farben und Bausteine dürfen alle verwenden, damit deine eigene Seite oder App in derselben Welt steht, mit deinem Inhalt und einer eigenen Akzentfarbe.">
+<meta property="og:description" content="Beidwerk entsteht offen. Schriften, Farben und Komponenten darf jede und jeder verwenden. So steht deine Seite oder App in derselben Welt, mit deinem Inhalt und deiner eigenen Akzentfarbe.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Beidwerk">
 <meta property="og:locale" content="de_AT">
-<meta name="description" content="Beidwerk entsteht offen. Die Schriften, Farben und Bausteine dürfen alle verwenden, damit deine eigene Seite oder App in derselben Welt steht, mit deinem Inhalt und einer eigenen Akzentfarbe.">
+<meta name="description" content="Beidwerk entsteht offen. Schriften, Farben und Komponenten darf jede und jeder verwenden. So steht deine Seite oder App in derselben Welt, mit deinem Inhalt und deiner eigenen Akzentfarbe.">
 <meta name="theme-color" content="#F4F0E8">
 <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("bw-theme-work");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="alternate" hreflang="en" href="../make.html">
@@ -29,36 +29,36 @@
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <header class="site-h">
   <a class="brand" href="../de/index.html"><img class="appicon" src="../marks/logo-icon.webp" alt="" width="34" height="34"><span class="word">BEIDWERK</span><span class="sub">· Wien</span></a>
-  <nav id="site-nav"><a href="../de/index.html">Beidwerk</a><a href="../de/apps.html">Apps</a><a href="../de/design/index.html">Gestaltung</a><a href="../de/make.html" aria-current=page>Machen</a><a href="../de/band/index.html">Band</a></nav>
+  <nav id="site-nav"><a href="../de/index.html">Beidwerk</a><a href="../de/apps.html">Apps</a><a href="../de/design/index.html">Design</a><a href="../de/make.html" aria-current=page>Selber machen</a><a href="../de/band/index.html">Band</a></nav>
   <div class="tools">
     <a class="tool" href="../make.html" hreflang="en" lang="en">en</a>
     <button class="tool" type="button" data-theme-toggle aria-pressed="false"><span class="when-dark">Hell</span><span class="when-light">Dunkel</span></button>
     <button class="tool menu-btn" type="button" aria-controls="site-nav">Menü</button>
   </div>
 </header>
-<section class="phead noimg" data-theme="dark"><div class="in"><p class="lab"><span class="dot"></span>Das offene Studio · frei zu verwenden</p><h1 class="cond">Selber machen</h1><p class="lede">Beidwerk entsteht offen. Die Schriften, Farben und Bausteine dürfen alle verwenden, damit deine eigene Seite oder App in derselben Welt steht, mit deinem Inhalt und einer eigenen Akzentfarbe.</p></div></section>
+<section class="phead noimg" data-theme="dark"><div class="in"><p class="lab"><span class="dot"></span>Das offene Studio · frei zu verwenden</p><h1 class="cond">Selber machen</h1><p class="lede">Beidwerk entsteht offen. Schriften, Farben und Komponenten darf jede und jeder verwenden. So steht deine Seite oder App in derselben Welt, mit deinem Inhalt und deiner eigenen Akzentfarbe.</p></div></section>
 <main class="prose" id="main">
-<section class="reveal"><header class="sec-h"><span class="idx">01</span><h2 class="cond">Die Gestaltung nehmen</h2><p class="aside lab">Drei Dateien, eine Seite</p></header>
+<section class="reveal"><header class="sec-h"><span class="idx">01</span><h2 class="cond">Das Design übernehmen</h2><p class="aside lab">Drei Dateien, eine Seite</p></header>
 <p><strong>1 · Die Dateien holen.</strong> Das <a href="https://github.com/maximedogawa/beidwerk-web">Repository beidwerk-web</a> auf GitHub
-hat sie in <code>site/</code>: die Schriften (Archivo und IBM Plex Mono, beide unter offenen Lizenzen), die Design-Tokens
-(<code>beidwerk.css</code>: Farben, Schrift, Abstände, hell und dunkel) und das Kit (<code>kit.css</code>).</p>
+hat sie in <code>site/</code>: die Schriften (Archivo und IBM Plex Mono, beide frei), die Design-Tokens (<code>beidwerk.css</code>:
+Farben, Schrift, Abstände, hell und dunkel) und das Kit (<code>kit.css</code>).</p>
 <p><strong>2 · Einbinden.</strong></p>
 <pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;beidwerk/fonts/fonts.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;beidwerk/beidwerk.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;beidwerk/kit.css&quot;&gt;
 &lt;body class=&quot;bw&quot; data-theme=&quot;light&quot;&gt;   &lt;!-- light = der Beleg, dark = die Bühne --&gt;
 </code></pre>
-<p><strong>3 · Mit dem Kit bauen.</strong> Überschriften, Knöpfe, Karten, Tabellen, Tags und Hinweise nehmen die <code>bw-</code>-Klassen
+<p><strong>3 · Mit dem Kit bauen.</strong> Überschriften, Buttons, Karten, Tabellen, Tags und Hinweise nutzen die <code>bw-</code>-Klassen
 (<code>bw-display</code>, <code>bw-button</code>, <code>bw-card</code>, <code>bw-table</code>, <code>bw-tag</code>, <code>bw-notice</code>…). Farbe, Schrift und Abstände kommen
 aus den Tokens, nie von Hand.</p>
 <p><a class="btn solid" href="https://github.com/maximedogawa/beidwerk-web">beidwerk-web auf GitHub →</a></p>
 
-</section><section class="reveal"><header class="sec-h"><span class="idx">02</span><h2 class="cond">Die Bühne und der Beleg</h2><p class="aside lab">Zwei Arten, eine Sprache</p></header>
+</section><section class="reveal"><header class="sec-h"><span class="idx">02</span><h2 class="cond">Die Bühne und der Beleg</h2><p class="aside lab">Zwei Modi, eine Sprache</p></header>
 <div class="demo">
 <div class="stage-panel demo-stage" data-theme="dark">
   <p class="bw-label">Tapsigned · die Bühne</p>
   <p class="bw-h1">Deine Arbeit, von beiden bestätigt.</p>
-  <p class="bw-lead">Kopf, Bilder, leere Zustände und erste Schritte stehen auf der Bühne.</p>
+  <p class="bw-lead">Header, Bilder, Empty States und Onboarding gehören auf die Bühne.</p>
   <p><a class="bw-button bw-button--primary" href="#">Beleg anlegen</a> <a class="bw-button" href="#">So geht's</a></p>
 </div>
 <div class="on-paper demo-receipt" data-theme="light">
@@ -73,71 +73,71 @@ aus den Tokens, nie von Hand.</p>
 </div>
 
 <ul>
-<li><strong>Die Bühne</strong> (dunkel) für Bilder, erste Schritte und Geschichten.</li>
+<li><strong>Die Bühne</strong> (dunkel) für Bilder, Onboarding und Geschichten.</li>
 <li><strong>Der Beleg</strong> (hell) für alles, was man zweimal liest: Formulare, Bestätigungen, Preise.</li>
-<li><strong>Ein Rot</strong> pro Bildschirm, für das eine Wichtige.</li>
+<li><strong>Ein Rot</strong> pro Screen, für das eine Wichtige.</li>
 </ul>
 </section><section class="reveal"><header class="sec-h"><span class="idx">03</span><h2 class="cond">Mach es zu deinem</h2><p class="aside lab">Was es zu Beidwerk macht</p></header>
 <ul>
 <li><strong>Deine eigene Akzentfarbe.</strong> Dein Produkt ändert die Farbe, nie die Regeln.</li>
 <li><strong>Zwei Dinge treffen sich.</strong> Zeig den Moment der Berührung: eine Bestätigung, ein Handschlag, eine Zahlung, die ankommt.</li>
-<li><strong>Ruhig rundherum, Spiel in den Zeichen.</strong> Das Verspielte bleibt klein, der Rest ruhig.</li>
-<li><strong>Keine Schrift in Bildern.</strong> Überschriften, Preise und Namen werden gesetzt, über oder neben dem Bild.</li>
+<li><strong>Ruhig rundherum, verspielt in den Zeichen.</strong> Das Spiel bleibt klein, der Rest ruhig.</li>
+<li><strong>Kein Text in Bildern.</strong> Überschriften, Preise und Namen werden gesetzt, über oder neben dem Bild.</li>
 </ul>
-</section><section class="reveal"><header class="sec-h"><span class="idx">04</span><h2 class="cond">Für Agenten</h2><p class="aside lab">Ein MCP-Server, einfaches JSON</p></header>
-<p>Auch Agenten können im Stil von Beidwerk arbeiten. Der Beidwerk-MCP-Server liest nur und läuft auf deinem eigenen
-Rechner, ohne Schlüssel und ohne Kosten. Ein Befehl verbindet ihn mit Claude Code:</p>
+</section><section class="reveal"><header class="sec-h"><span class="idx">04</span><h2 class="cond">Für Agents</h2><p class="aside lab">Ein MCP-Server, einfaches JSON</p></header>
+<p>Auch Agents können im Stil von Beidwerk arbeiten. Der Beidwerk-MCP-Server ist read-only und läuft lokal auf
+deinem Rechner, ohne API-Key und ohne Kosten. Ein Befehl verbindet ihn mit Claude Code:</p>
 <pre><code class="language-sh">claude mcp add beidwerk -- uvx --from git+https://github.com/maximedogawa/beidwerk-web beidwerk-mcp
 </code></pre>
 <table>
 <thead>
 <tr>
-<th>Werkzeug</th>
+<th>Tool</th>
 <th>Was es liefert</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>design_principles</code></td>
-<td>die sieben Prinzipien, die Probe für alles Neue, was Beidwerk nie tut (Englisch oder Deutsch)</td>
+<td>die sieben Prinzipien, den Test für alles Neue und was Beidwerk nie macht (Englisch oder Deutsch)</td>
 </tr>
 <tr>
 <td><code>design_tokens</code></td>
-<td>die Farben für die Bühne oder den Beleg, Schrift, Abstände, Rundungen und Linien</td>
+<td>die Farben für Bühne oder Beleg, Schrift, Abstände, Rundungen und Linien</td>
 </tr>
 <tr>
 <td><code>kit</code></td>
-<td>die drei Stylesheets zum Einbinden und jede <code>bw-</code>-Komponente mit einem HTML-Beispiel</td>
+<td>die drei Stylesheets und jede <code>bw-</code>-Komponente mit HTML-Beispiel</td>
 </tr>
 <tr>
 <td><code>signs</code></td>
-<td>die vier roten Zeichen mit ihrer Bedeutung im B und ihrem SVG</td>
+<td>die vier roten Zeichen, ihre Bedeutung im B und ihr SVG</td>
 </tr>
 <tr>
 <td><code>build_prompt</code></td>
-<td>ein Bild-Prompt im Stil von Beidwerk für jedes Motiv: hell (der Beleg) oder Nacht (die Bühne)</td>
+<td>einen Bild-Prompt im Stil von Beidwerk für jedes Motiv: hell (der Beleg) oder Nacht (die Bühne)</td>
 </tr>
 </tbody>
 </table>
-<p>Dieselben Daten gibt es auf dieser Seite für Agenten, die nur das Web lesen: <a href="../api/beidwerk.json">api/beidwerk.json</a>
+<p>Für Agents, die nur das Web lesen, gibt es dieselben Daten hier: <a href="../api/beidwerk.json">api/beidwerk.json</a>
 und <a href="../llms.txt">llms.txt</a>.</p>
-</section><section class="reveal"><header class="sec-h"><span class="idx">05</span><h2 class="cond">Wie Beidwerk selbst entsteht</h2><p class="aside lab">Von Hand, mit KI-Werkzeugen</p></header>
-<p>Beidwerk macht ein Mensch mit einer Reihe von KI-Werkzeugen, Schritt für Schritt: jedes Bild, jede Einstellung
-und jeder Schnitt wird von Hand ausgewählt, und das meiste wird verworfen.</p>
+</section><section class="reveal"><header class="sec-h"><span class="idx">05</span><h2 class="cond">Wie Beidwerk selbst entsteht</h2><p class="aside lab">Von Hand, mit KI-Tools</p></header>
+<p>Hinter Beidwerk steht ein Mensch mit einer Handvoll KI-Tools. Jedes Bild, jede Einstellung und jeder Schnitt wird
+von Hand ausgewählt, das meiste fliegt raus.</p>
 <ul>
-<li><strong>Die Band.</strong> Vier Figuren haben als Konzeptzeichnungen begonnen. Ihre Gesichter entstehen in Midjourney
-  jedes Mal aus denselben Vorlagen, damit Nahaufnahme und Totale dieselbe Person zeigen.</li>
+<li><strong>Die Band.</strong> Die vier Figuren waren zuerst Concept Art. Ihre Gesichter entstehen in Midjourney immer aus
+  denselben Vorlagen, damit Nahaufnahme und Totale dieselbe Person zeigen.</li>
 <li><strong>Die Lieder.</strong> Auf Österreichisch geschrieben, mit Suno gesungen, jedes mit einer singbaren englischen Fassung.</li>
-<li><strong>Die Musikvideos.</strong> Einstellung für Einstellung auf das Lied geplant: ein echt wirkendes Standbild pro
-  Einstellung, zu einer kurzen bewegten Einstellung gemacht, im Takt geschnitten, eine Farbstimmung pro Video.
-  Wo ein Mitglied singt, folgt der Mund der echten Stimme des Lieds.</li>
-<li><strong>Die Apps.</strong> In derselben Sprache gestaltet und eine nach der anderen gebaut, von der ersten Idee bis live.</li>
+<li><strong>Die Musikvideos.</strong> Einstellung für Einstellung zum Lied geplant: pro Einstellung ein realistisches Standbild,
+  daraus ein kurzer Clip, im Takt geschnitten, eine Farbstimmung pro Video. Wo jemand singt, passen die Lippen
+  zur echten Stimme.</li>
+<li><strong>Die Apps.</strong> In derselben Designsprache gestaltet und eine nach der anderen gebaut, von der Idee bis live.</li>
 </ul></section>
 </main>
 <footer class="site-f"><div class="in">
   <p class="big cond">Nicht für dich. Mit dir.</p>
-  <div class="cols"><div><p class="lab">Beidwerk</p><a href="../de/apps.html">Apps</a><a href="../de/design/index.html">Gestaltung</a><a href="../de/language.html">Wie wir reden</a><a href="../de/make.html">Machen</a></div><div><p class="lab">Die Band</p><a href="../de/band/index.html">Band</a><a href="../de/album.html">Das Album</a><a href="../de/world.html">Neu-Wien</a></div><div><p class="lab">Offen</p><a href="https://github.com/maximedogawa/beidwerk-web">GitHub</a><a href="https://pengui.space">pengui.space</a><a href="https://mempoolxch.space">mempoolxch.space</a></div><div><p class="lab">Kontakt</p><a href="mailto:leo@librem.one">leo@librem.one</a><a href="https://x.com/maximedogawa">X · @maximedogawa</a><a href="../de/legal.html">Rechtliches · Impressum · Datenschutz</a></div></div>
-  <p class="fine">Beidwerk ist ein Kunst- und Software-Studio in Wien: Apps, Musik und Geschichten in einer eigenen Gestaltungssprache, offen gemacht.</p>
+  <div class="cols"><div><p class="lab">Beidwerk</p><a href="../de/apps.html">Apps</a><a href="../de/design/index.html">Design</a><a href="../de/language.html">Wie wir reden</a><a href="../de/make.html">Selber machen</a></div><div><p class="lab">Die Band</p><a href="../de/band/index.html">Band</a><a href="../de/album.html">Das Album</a><a href="../de/world.html">Neu-Wien</a></div><div><p class="lab">Offen</p><a href="https://github.com/maximedogawa/beidwerk-web">GitHub</a><a href="https://pengui.space">pengui.space</a><a href="https://mempoolxch.space">mempoolxch.space</a></div><div><p class="lab">Kontakt</p><a href="mailto:leo@librem.one">leo@librem.one</a><a href="https://x.com/maximedogawa">X · @maximedogawa</a><a href="../de/legal.html">Rechtliches · Impressum · Datenschutz</a></div></div>
+  <p class="fine">Beidwerk ist ein Kunst- und Software-Studio in Wien: Apps, Musik und Geschichten in einer eigenen Designsprache, Open Source.</p>
 </div></footer>
 <script src="../assets/site.js?v=bc5a0970" defer></script>
 </body>
