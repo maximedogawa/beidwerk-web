@@ -48,41 +48,41 @@
       "principles": [
         {
           "title": "Zwei Seiten, eine Linie",
-          "text": "Alles, was wir machen, hat zwei Seiten, die sich treffen: zwei Menschen, zwei Hände, das Alte und das Neue. Diesen Moment setzen wir in die Mitte, auf eine senkrechte Linie, damit das Auge weiß, wohin es schauen soll."
+          "text": "Alles, was wir machen, hat zwei Seiten, die sich treffen: zwei Menschen, zwei Hände, Alt und Neu. Diesen Moment setzen wir in die Mitte, auf eine senkrechte Linie. So weiß das Auge, wohin es schauen soll."
         },
         {
           "title": "Dinge treffen sich, dann ist Ruhe",
-          "text": "Jede Bewegung hat vier Schritte: Zwei Dinge nähern sich, sie berühren sich, sie hinterlassen eine Spur, sie kommen zur Ruhe. Eine Zahlung kommt an, eine Münze fällt, ein Eintrag ist bestätigt. Die Zeichen dürfen spielen; der Bildschirm rundherum bleibt ruhig."
+          "text": "Jede Bewegung hat vier Schritte: Zwei Dinge nähern sich, berühren sich, hinterlassen eine Spur und kommen zur Ruhe. Eine Zahlung kommt an, eine Münze fällt, ein Eintrag ist bestätigt. Die Zeichen dürfen spielen; der Bildschirm rundherum bleibt ruhig."
         },
         {
           "title": "Ein Rot, als Licht",
-          "text": "Rot gibt es einmal pro Bildschirm oder Bild, auf dem einen Wichtigsten, und nur auf einem kleinen Teil davon. Es ist nie Dekoration. Jede App hat ihre eigene Akzentfarbe; die Regel bleibt."
+          "text": "Rot gibt es einmal pro Screen oder Bild, nur auf dem Wichtigsten und nur auf einer kleinen Fläche. Es ist nie Dekoration. Jede App hat ihre eigene Akzentfarbe; die Regel bleibt."
         },
         {
           "title": "Echte Materialien",
-          "text": "Papier, Holz, Messing, Glas, Ziegel: Dinge, die man angreifen kann, abgenutzt und von Hand gemacht. Keine glänzenden Verläufe. Ein Ornament muss eine Bedeutung tragen, sonst kommt es weg."
+          "text": "Papier, Holz, Messing, Glas, Ziegel: Dinge zum Angreifen, abgenutzt und von Hand gemacht. Keine glänzenden Verläufe. Ein Ornament braucht eine Bedeutung, sonst fliegt es raus."
         },
         {
           "title": "Alle Jahrzehnte zugleich",
-          "text": "Unsere Welt mischt 1910, 1968, 1986, 1999 und 2050 in einem Raum, so wie Wien es tut. Wir verbinden sie mit Absicht, nie als Kostüm und nie als glänzende Zukunftsvision."
+          "text": "Unsere Welt mischt 1910, 1968, 1986, 1999 und 2050 in einem Raum, so wie Wien. Mit Absicht, nie als Kostüm und nie als glänzende Zukunftsvision."
         },
         {
           "title": "Zwei Modi: die Bühne und der Beleg",
-          "text": "Die Bühne ist dunkel und stimmungsvoll, für Bilder, Geschichten und den ersten Eindruck. Der Beleg ist hell: schlichtes Papier, schwarze Tinte, klare Zahlen, für den Moment, in dem jemand bestätigt, unterschreibt oder zahlt. Dieser Moment wird nie dekoriert."
+          "text": "Die Bühne ist dunkel und stimmungsvoll: für Bilder, Geschichten und den ersten Eindruck. Der Beleg ist hell: schlichtes Papier, schwarze Tinte, klare Zahlen. Er gilt, wenn jemand bestätigt, unterschreibt oder zahlt. Dieser Moment wird nie dekoriert."
         },
         {
-          "title": "Schrift wird gesetzt, nie erzeugt",
-          "text": "Wörter stehen in Archivo, Zahlen und Daten in IBM Plex Mono, Titel werden gezeichnet oder von Hand gesetzt. Keine Maschine schreibt Text in ein Bild."
+          "title": "Schrift wird gesetzt, nie generiert",
+          "text": "Wörter in Archivo, Zahlen und Daten in IBM Plex Mono, Titel gezeichnet oder von Hand gesetzt. Keine KI schreibt Text in ein Bild."
         }
       ],
-      "test": "Die Probe für alles Neue: Deck den Namen ab. Ist es noch erkennbar Beidwerk? Ist klar, wer es gemacht hat? Würde sich in hundert Jahren noch jemand dafür interessieren? Wenn eine Antwort Nein ist, ist es nicht fertig.",
+      "test": "Der Test für alles Neue: Deck den Namen ab. Erkennt man Beidwerk noch? Ist klar, wer es gemacht hat? Interessiert es in hundert Jahren noch jemanden? Ist eine Antwort Nein, ist es nicht fertig.",
       "never": [
         "Lila, Pink oder glänzendes „Tech\"-Blau; dekorative Verläufe",
         "mehr als ein Rot in einem Bild oder auf einem Bildschirm",
         "Gold als Schriftfarbe, als Verlauf oder als Plastik",
-        "Text, Zahlen oder Logos, die in einem Bild erzeugt werden",
+        "Text, Zahlen oder Logos, die in einem Bild generiert werden",
         "die Klischees der Branche: leuchtende Blockchains, Münzen mit Gesichtern, Roboter",
-        "Schlagschatten und abgerundete Pillen-Knöpfe in einer Oberfläche",
+        "Schlagschatten und Pill-Buttons im Interface",
         "alles, wodurch sich Menschen beobachtet oder eingesperrt fühlen"
       ]
     }
